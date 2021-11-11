@@ -91,13 +91,10 @@ export default {
         }
 
         .nav__link {
-          display: inline-block;
           padding: $padding-50 0.5rem;
-          text-decoration: none;
           text-transform: uppercase;
           font-size: 0.8rem;
           font-weight: 500;
-          color: black;
         }
       }
     }

@@ -1,11 +1,10 @@
 <template>
   <div class="footer__big-nav">
     <nav class="container">
-      <img src="../assets/img/buy-comics-digital-comics.png" alt="" />
       <ul class="nav__ul">
         <li class="nav__li" v-for="(link, i) in linksList" :key="i">
-          <img :src="link.src" :alt="link.text" />
-          <a :href="link.href">
+          <img class="nav__icon" :src="require(link.src)" :alt="link.text" />
+          <a :href="link.href" class="nav__link">
             <p>{{ link.text }}</p>
           </a>
         </li>
@@ -21,7 +20,7 @@ export default {
     return {
       linksList: [
         {
-          src: "assets/img/buy-comics-digital-comics.png",
+          src: "../assets/img/buy-comics-digital-comics.png",
           text: "digital comics",
           href: "#",
         },
@@ -56,5 +55,26 @@ export default {
 .footer__big-nav {
   background-color: $color-primary;
   padding: $padding-50 0;
+
+  .nav__ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 2rem;
+    margin: auto;
+    .nav__li {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      .nav__icon {
+        height: 55px;
+      }
+      .nav__link {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: white;
+      }
+    }
+  }
 }
 </style>
