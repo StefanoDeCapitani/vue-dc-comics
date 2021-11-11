@@ -93,6 +93,7 @@ export default {
   position: relative;
   background-image: url("../assets/img/footer-bg.jpg");
   background-size: cover;
+  background-position: center;
   padding: $padding-40 0;
   overflow: hidden;
 

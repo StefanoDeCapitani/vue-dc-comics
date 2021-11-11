@@ -67,7 +67,7 @@ export default {
     margin-left: auto;
     .nav__ul {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.7rem;
       .nav__li {
         position: relative;
 
@@ -75,7 +75,7 @@ export default {
           content: "";
           position: absolute;
           bottom: 0;
-          left: 0.5rem;
+          left: 0rem;
           right: 100%;
           height: 5px;
           background-color: $color-primary;
@@ -85,14 +85,14 @@ export default {
             color: $color-primary;
           }
           &::after {
-            right: 0.5rem;
+            right: 0rem;
           }
         }
 
         .nav__link {
-          padding: $padding-50 0.5rem;
+          padding: $padding-50 0;
           text-transform: uppercase;
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           font-weight: 500;
         }
       }
