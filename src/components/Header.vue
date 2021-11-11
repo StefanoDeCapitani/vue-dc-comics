@@ -1,40 +1,20 @@
 <template>
   <header class="header">
     <div class="container">
-      <a href="#">
+      <a class="logo" href="#">
         <img src="../assets/img/dc-logo.png" alt="Logo DC comics" />
       </a>
       <nav class="nav">
         <ul class="nav__ul">
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__link" href="#">Link</a>
+          <li
+            v-for="(link, i) in linksList"
+            :key="i"
+            class="nav__li"
+            :class="{ active: isCurrentLink(i) }"
+          >
+            <a class="nav__link" :href="link.href">
+              {{ link.text }}
+            </a>
           </li>
         </ul>
       </nav>
@@ -45,15 +25,83 @@
 <script>
 export default {
   name: "Header",
+  props: {
+    currentLink: Number,
+  },
+  data() {
+    return {
+      linksList: [
+        { text: "characters", href: "#" },
+        { text: "comics", href: "#" },
+        { text: "movies", href: "#" },
+        { text: "tv", href: "#" },
+        { text: "games", href: "#" },
+        { text: "collectibles", href: "#" },
+        { text: "videos", href: "#" },
+        { text: "fans", href: "#" },
+        { text: "news", href: "#" },
+        { text: "shop", href: "#" },
+      ],
+    };
+  },
+  methods: {
+    isCurrentLink(i) {
+      return i === this.currentLink;
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
+@import "../assets/styles/variables";
 .container {
   max-width: 1280px;
   display: flex;
+  align-items: center;
+  margin: auto;
+  .logo {
+    height: 80px;
+    img {
+      height: 100%;
+    }
+  }
   .nav {
     margin-left: auto;
+    .nav__ul {
+      display: flex;
+      gap: 0.5rem;
+      list-style-type: none;
+      .nav__li {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0.5rem;
+          right: 100%;
+          height: 5px;
+          background-color: $color-primary;
+        }
+        &.active {
+          .nav__link {
+            color: $color-primary;
+          }
+          &::after {
+            right: 0.5rem;
+          }
+        }
+
+        .nav__link {
+          padding: 50px 0.5rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: black;
+          display: inline-block;
+        }
+      }
+    }
   }
 }
 </style>

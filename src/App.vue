@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :currentLink="1" />
     <Main />
     <Footer />
   </div>
@@ -22,7 +22,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import "assets/styles/variables";
+
 #app {
-  width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 </style>
