@@ -3,12 +3,12 @@
     <nav class="container">
       <ul class="nav__ul">
         <li class="nav__li" v-for="(link, i) in linksList" :key="i">
-          <img
-            class="nav__icon"
-            :src="require('../assets/img/' + link.src)"
-            :alt="link.text"
-          />
           <a :href="link.href" class="nav__link">
+            <img
+              class="nav__icon"
+              :src="require('../assets/img/' + link.src)"
+              :alt="link.text"
+            />
             <p>{{ link.text }}</p>
           </a>
         </li>
@@ -63,19 +63,20 @@ export default {
   .nav__ul {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 2rem;
     margin: auto;
     .nav__li {
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-      .nav__icon {
-        height: 55px;
-      }
       .nav__link {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
         text-transform: uppercase;
         font-size: 0.8rem;
         color: white;
+        .nav__icon {
+          height: 55px;
+        }
       }
 
       &:last-of-type {

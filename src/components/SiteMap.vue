@@ -102,7 +102,7 @@ export default {
     flex-wrap: wrap;
     align-content: flex-start;
     gap: 1rem 2rem;
-    height: 270px;
+    height: 300px;
 
     .site-map__category {
       display: flex;
@@ -113,9 +113,13 @@ export default {
       .site-map__tag {
         color: white;
       }
-
-      .site-map__link {
-        color: rgba(255, 255, 255, 0.233);
+      .site-map__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        .site-map__link {
+          color: rgba(255, 255, 255, 0.233);
+        }
       }
     }
 

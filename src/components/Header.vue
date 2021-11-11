@@ -68,7 +68,6 @@ export default {
     .nav__ul {
       display: flex;
       gap: 0.5rem;
-      list-style-type: none;
       .nav__li {
         position: relative;
 
