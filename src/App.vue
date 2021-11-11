@@ -27,6 +27,7 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import "assets/styles/variables";
+@import "assets/styles/utilities";
 
 #app {
   font-family: "Roboto", sans-serif;

@@ -55,7 +55,6 @@ export default {
 <style scoped lang="scss">
 @import "../assets/styles/variables";
 .container {
-  @include container-preset;
   display: flex;
   align-items: center;
   .logo {

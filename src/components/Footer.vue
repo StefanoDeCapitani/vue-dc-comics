@@ -1,9 +1,18 @@
 <template>
-  <div></div>
+  <footer class="page__footer">
+    <FooterBigNav />
+  </footer>
 </template>
 
 <script>
-export default {};
+import FooterBigNav from "./FooterBigNav.vue";
+
+export default {
+  name: "Footer",
+  components: {
+    FooterBigNav,
+  },
+};
 </script>
 
 <style></style>

@@ -17,7 +17,6 @@ export default {};
   background-color: black;
   padding: $padding-50 0;
   .container {
-    @include container-preset;
     p {
       color: white;
       font-size: 1.3rem;
