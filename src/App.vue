@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header :currentLink="1" />
+    <Header :currentLink="currentLink" />
     <Main />
     <Footer />
   </div>
@@ -17,6 +17,9 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data() {
+    return { currentLink: 1 };
   },
 };
 </script>

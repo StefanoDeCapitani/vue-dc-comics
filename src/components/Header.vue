@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="page__header">
     <div class="container">
       <a class="logo" href="#">
         <img src="../assets/img/dc-logo.png" alt="Logo DC comics" />
@@ -55,10 +55,9 @@ export default {
 <style scoped lang="scss">
 @import "../assets/styles/variables";
 .container {
-  max-width: 1280px;
+  @include container-preset;
   display: flex;
   align-items: center;
-  margin: auto;
   .logo {
     height: 80px;
     img {
@@ -93,12 +92,13 @@ export default {
         }
 
         .nav__link {
-          padding: 50px 0.5rem;
+          display: inline-block;
+          padding: $padding-50 0.5rem;
           text-decoration: none;
           text-transform: uppercase;
+          font-size: 0.8rem;
           font-weight: 500;
           color: black;
-          display: inline-block;
         }
       }
     }
