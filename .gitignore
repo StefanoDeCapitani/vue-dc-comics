@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+dc-comics-empty-layout.png
 
 # local env files
 .env.local
