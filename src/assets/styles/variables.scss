@@ -3,3 +3,43 @@ $color-primary: #0282f9;
 $padding-50: 50px;
 $padding-40: 40px;
 $padding-30: 30px;
+
+@mixin flex-row-wrap($gap) {
+  display: flex;
+  flex-flow: row wrap;
+  gap: $gap;
+}
+
+@mixin flex-column-wrap($gap) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: $gap;
+}
+
+@mixin ratio($height) {
+  .ratio {
+    width: 100%;
+    &::before {
+      content: "";
+      margin-top: $height;
+      display: block;
+    }
+    position: relative;
+    .content {
+      position: absolute;
+      inset: 0;
+    }
+  }
+}
+
+@mixin row($num-of-col, $gap) {
+  @include flex-row-wrap(0);
+  margin-right: -$gap;
+  margin-left: -$gap;
+  .card {
+    color: white;
+    width: calc((100% / $num-of-col) - ($gap * 2));
+    margin: 0 $gap;
+    @include flex-column-wrap(1rem);
+  }
+}

@@ -1,13 +1,32 @@
 <template>
   <main class="page__main">
     <div class="container">
-      <p>--&gt; Content goes here &lt;--</p>
+      <div class="cards-container">
+        <Card
+          v-for="(card, i) in cardsArray"
+          :key="i"
+          :thumbnail="card.thumb"
+          :title="card.series"
+        />
+      </div>
     </div>
   </main>
 </template>
 
 <script>
-export default {};
+import JsonData from "@/assets/json/dc-comics.json";
+import Card from "./Card.vue";
+
+export default {
+  components: {
+    Card,
+  },
+  data() {
+    return {
+      cardsArray: JsonData,
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -17,9 +36,8 @@ export default {};
   background-color: black;
   padding: $padding-50 0;
   .container {
-    p {
-      color: white;
-      font-size: 1.3rem;
+    .cards-container {
+      @include row(6, 0.5rem);
     }
   }
 }

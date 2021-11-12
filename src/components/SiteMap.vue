@@ -98,26 +98,18 @@ export default {
   overflow: hidden;
 
   .site-map__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include flex-column-wrap(1rem 2rem);
     align-content: flex-start;
-    gap: 1rem 2rem;
     height: 300px;
 
     .site-map__category {
-      display: flex;
+      @include flex-column-wrap(1rem);
       flex: 0 0 auto;
-      flex-direction: column;
-      gap: 1rem;
-
       .site-map__tag {
         color: white;
       }
       .site-map__ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
+        @include flex-column-wrap(0.3rem);
         .site-map__link {
           color: rgba(255, 255, 255, 0.233);
         }
