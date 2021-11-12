@@ -1,9 +1,9 @@
 <template>
   <div class="social">
     <h3>Follow us</h3>
-    <ul>
+    <ul class="ul">
       <li v-for="(social, i) in socialList" :key="i">
-        <a :href="social.href">
+        <a class="a" :href="social.href">
           <img
             :src="require('../assets/img/' + social.src)"
             :alt="social.alt"

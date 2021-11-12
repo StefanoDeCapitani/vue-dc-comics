@@ -32,7 +32,7 @@ $padding-30: 30px;
   }
 }
 
-@mixin row($num-of-col, $gap) {
+@mixin cards-row($num-of-col, $gap) {
   @include flex-row-wrap(0);
   margin-right: -$gap;
   margin-left: -$gap;

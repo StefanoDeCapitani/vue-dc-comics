@@ -1,9 +1,9 @@
 <template>
   <div class="footer__big-nav">
     <nav class="container">
-      <ul class="nav__ul">
+      <ul class="ul nav__ul">
         <li class="nav__li" v-for="(link, i) in linksList" :key="i">
-          <a :href="link.href" class="nav__link">
+          <a :href="link.href" class="a nav__link">
             <img
               class="nav__icon"
               :src="require('../assets/img/' + link.src)"

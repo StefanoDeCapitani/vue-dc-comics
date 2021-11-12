@@ -7,13 +7,13 @@
         :key="i"
       >
         <h3 class="site-map__tag">{{ category.tag }}</h3>
-        <ul class="site-map__ul">
+        <ul class="ul site-map__ul">
           <li
             class="site-map__li"
             v-for="(link, i) in category.linksList"
             :key="i"
           >
-            <a class="site-map__link" :href="link.href">
+            <a class="a site-map__link" :href="link.href">
               {{ link.text }}
             </a>
           </li>

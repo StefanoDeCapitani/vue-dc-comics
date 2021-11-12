@@ -5,14 +5,14 @@
         <img src="../assets/img/dc-logo.png" alt="Logo DC comics" />
       </a>
       <nav class="nav">
-        <ul class="nav__ul">
+        <ul class="ul nav__ul">
           <li
             v-for="(link, i) in linksList"
             :key="i"
             class="nav__li"
             :class="{ active: isCurrentLink(i) }"
           >
-            <a class="nav__link" :href="link.href">
+            <a class="a nav__link" :href="link.href">
               {{ link.text }}
             </a>
           </li>

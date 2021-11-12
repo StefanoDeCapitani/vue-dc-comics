@@ -5,12 +5,19 @@
   padding-right: $padding-50;
 }
 
-ul {
+.ul {
   list-style-type: none;
 }
 
-a {
+.a {
   display: inline-block;
   text-decoration: none;
   color: black;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
 }

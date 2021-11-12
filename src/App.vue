@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header :currentLink="currentLink" />
-    <Main />
+    <Main> </Main>
     <Footer />
   </div>
 </template>

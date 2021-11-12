@@ -1,25 +1,20 @@
 <template>
   <main class="page__main">
+    <div class="jumbotron"></div>
     <div class="container">
-      <div class="cards-container">
-        <Card
-          v-for="(card, i) in cardsArray"
-          :key="i"
-          :thumbnail="card.thumb"
-          :title="card.series"
-        />
-      </div>
+      <CardsGrid :cardsArray="cardsArray"></CardsGrid>
     </div>
   </main>
 </template>
 
 <script>
 import JsonData from "@/assets/json/dc-comics.json";
-import Card from "./Card.vue";
+import CardsGrid from "./CardsGrid.vue";
 
 export default {
+  name: "Main",
   components: {
-    Card,
+    CardsGrid,
   },
   data() {
     return {
@@ -34,11 +29,13 @@ export default {
 
 .page__main {
   background-color: black;
-  padding: $padding-50 0;
-  .container {
-    .cards-container {
-      @include row(6, 0.5rem);
-    }
+  color: white;
+  padding-bottom: 2rem;
+  .jumbotron {
+    height: 400px;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    background-position: top center;
   }
 }
 </style>

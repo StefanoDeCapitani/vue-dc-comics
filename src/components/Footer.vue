@@ -4,7 +4,7 @@
     <SiteMap />
     <div class="sign-up-social">
       <div class="container sign-up-social__container">
-        <a class="btn--sign-up" href="#">Sign-Up Now!</a>
+        <a class="a btn--sign-up" href="#">Sign-Up Now!</a>
         <SocialLinks />
       </div>
     </div>
